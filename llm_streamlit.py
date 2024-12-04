@@ -6,21 +6,19 @@ from openai import OpenAI
 api_key = st.text_input("Enter your NVIDIA API key", type="password")
 client = OpenAI(
   base_url = "https://integrate.api.nvidia.com/v1",
-  #api_key = "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"
+  
   api_key=api_key
 )
 
 st.title("Agent financier")
 
-# Set OpenAI API key from Streamlit secrets
-#client=ChatNVIDIA(api_key="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",model="meta/llama3-70b-instruct")
-#client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 
-#model = ChatNVIDIA(model="nvidia/nemotron-4-340b-instruct")
+
+
 
 if "nvidia_model" not in st.session_state:
-    #st.session_state["nvidia_model"] = "meta/llama3-70b-instruct"
+    
     st.session_state["nvidia_model"] = "nvidia/nemotron-4-340b-instruct"
 
 
