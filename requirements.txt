@@ -1,5 +1,6 @@
-fastapi
+ifastapi
 uvicorn
 langchain-core
 langchain-nvidia-ai-endpoints
 langserve
+openai
