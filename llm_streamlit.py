@@ -1,11 +1,11 @@
 import streamlit as st
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
+from openai import OpenAI
 
-
-#client = OpenAI(
-#  base_url = "https://integrate.api.nvidia.com/v1",
-#  api_key = "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"
-#)
+client = OpenAI(
+  base_url = "https://integrate.api.nvidia.com/v1",
+  api_key = "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"
+)
 
 st.title("Agent financier")
 
@@ -14,19 +14,11 @@ st.title("Agent financier")
 #client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
 
-#model = ChatNVIDIA(model="nvidia/nemotron-4-340b-instruct")
-client = ChatNVIDIA(
-  model="nvidia/nemotron-4-340b-instruct",
-  api_key="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", 
-  temperature=0.9,
-  top_p=0.7,
-  max_tokens=1024,
-)
+model = ChatNVIDIA(model="nvidia/nemotron-4-340b-instruct")
 
-
-#if "nvidia_model" not in st.session_state:
+if "nvidia_model" not in st.session_state:
     #st.session_state["nvidia_model"] = "meta/llama3-70b-instruct"
- #   st.session_state["nvidia_model"] = "nvidia/nemotron-4-340b-instruct"
+    st.session_state["nvidia_model"] = "nvidia/nemotron-4-340b-instruct"
 
 
 # Initialize chat history
