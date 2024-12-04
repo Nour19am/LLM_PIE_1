@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
-from openai import OpenAI
+
 
 #client = OpenAI(
 #  base_url = "https://integrate.api.nvidia.com/v1",
