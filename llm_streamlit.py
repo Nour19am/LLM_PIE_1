@@ -1,10 +1,13 @@
+
 import streamlit as st
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
 from openai import OpenAI
-
+# Prompt the user for their API key
+api_key = st.text_input("Enter your NVIDIA API key", type="password")
 client = OpenAI(
   base_url = "https://integrate.api.nvidia.com/v1",
-  api_key = "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"
+  #api_key = "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"
+  api_key=api_key
 )
 
 st.title("Agent financier")
