@@ -4,3 +4,5 @@ langchain-core
 langchain-nvidia-ai-endpoints
 langserve
 openai
+yfinance
+yahoo_fin
